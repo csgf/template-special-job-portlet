@@ -178,7 +178,7 @@ public class TemplateSpecialJobPortlet extends MVCPortlet {
 				description.setInputFiles(pilotScript);
 				break;
 			}
-			if(appInput.getArguments()!=null && appInput.getArguments().size() > 0)
+			if(appInput.getArguments()!=null && appInput.getArguments().size() > 0 && i < appInput.getArguments().size())
 				description.setArguments(appInput.getArguments().get(i));
 			description.setOutputPath("/tmp");
 			description.setOutput("myOutput-" + i + ".txt");
