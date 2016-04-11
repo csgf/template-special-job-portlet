@@ -21,7 +21,7 @@ PACKAGE_PATH=./docroot/WEB-INF/src/it/dfa/unict
 LIFERAY_DISPLAY=./docroot/WEB-INF/liferay-display.xml
 LIFERAY_PORTLET=./docroot/WEB-INF/liferay-portlet.xml
 PORTLET=./docroot/WEB-INF/portlet.xml
-PORTLET_CLASS=./docroot/WEB-INF/src/it/dfa/unict/TemplatePortlet.java
+PORTLET_CLASS=./docroot/WEB-INF/src/it/dfa/unict/TemplateSpecialJobPortlet.java
 CONFIG_CLASS=./docroot/WEB-INF/src/it/dfa/unict/ConfigurationActionImpl.java
 VIEW_PILOT_JSP=./docroot/jsps/portlet-config/view-pilot.jsp
 BUILD_FILE=build.xml
@@ -61,61 +61,61 @@ replace_line() {
 REPL_LINE="<category name=\"Sci-GaIA\">"
 NEW_LINE="\t<category name=\"$PORTLET_CATEGORY_NAME\">"
 replace_line $LIFERAY_DISPLAY "$REPL_LINE" "$NEW_LINE" "orig"
-REPL_LINE="<portlet id=\"TemplatePortlet\" />"
+REPL_LINE="<portlet id=\"TemplateSpecialJobPortlet\" />"
 NEW_LINE="\t\t<portlet id=\"$PORTLET_NAME\" />"
 replace_line $LIFERAY_DISPLAY "$REPL_LINE" "$NEW_LINE"
 
 # liferay-portlet.xml
-REPL_LINE="<portlet-name>TemplatePortlet</portlet-name>"
+REPL_LINE="<portlet-name>TemplateSpecialJobPortlet</portlet-name>"
 NEW_LINE="\t\t<portlet-name>$PORTLET_NAME</portlet-name>"
 replace_line $LIFERAY_PORTLET "$REPL_LINE" "$NEW_LINE" "orig"
-REPL_LINE="<css-class-wrapper>template-portlet</css-class-wrapper>"
+REPL_LINE="<css-class-wrapper>template-special-job-portlet</css-class-wrapper>"
 NEW_LINE="\t\t<css-class-wrapper>$PORTLET_CLASSWRAPPER</css-class-wrapper>"
 replace_line $LIFERAY_PORTLET "$REPL_LINE" "$NEW_LINE"
 
 # portlet.xml
-REPL_LINE="<portlet-name>TemplatePortlet</portlet-name>"
+REPL_LINE="<portlet-name>TemplateSpecialJobPortlet</portlet-name>"
 NEW_LINE="\t\t<portlet-name>$PORTLET_NAME</portlet-name>"
 replace_line $PORTLET "$REPL_LINE" "$NEW_LINE" "orig"
-REPL_LINE="<display-name>Sci-GaIA Template Portlet</display-name>"
+REPL_LINE="<display-name>Sci-GaIA Template Special Job Portlet</display-name>"
 NEW_LINE="\t\t<display-name>$PORTLET_DISPLAY_NAME</display-name>"
 replace_line $PORTLET "$REPL_LINE" "$NEW_LINE"
-REPL_LINE="<portlet-class>it.dfa.unict.TemplatePortlet</portlet-class>"
+REPL_LINE="<portlet-class>it.dfa.unict.TemplateSpecialJobPortlet</portlet-class>"
 NEW_LINE="\t\t<portlet-class>it.dfa.unict.$MYPORTLET_CLASS</portlet-class>"
 replace_line $PORTLET "$REPL_LINE" "$NEW_LINE"
-REPL_LINE="<title>Sci-GaIA Template Portlet</title>"
+REPL_LINE="<title>Sci-GaIA Template Special Job Portlet</title>"
 NEW_LINE="\t\t<title>$PORTLET_TITLE</title>"
 replace_line $PORTLET "$REPL_LINE" "$NEW_LINE"
-REPL_LINE="<short-title>Sci-GaIA Template Portlet</short-title>"
+REPL_LINE="<short-title>Sci-GaIA Template SpecialJob Portlet</short-title>"
 NEW_LINE="\t\t<short-title>$PORTLET_SHTITLE</short-title>"
 replace_line $PORTLET "$REPL_LINE" "$NEW_LINE"
-REPL_LINE="<keywords>Template Portlet</keywords>"
+REPL_LINE="<keywords>Template Special Job Portlet</keywords>"
 NEW_LINE="\t\t<keywords>$PORTLET_KEYWORKDS</keywords>"
 replace_line $PORTLET "$REPL_LINE" "$NEW_LINE"
 
 # HostnamePortlet.java
-REPL_LINE="public class TemplatePortlet extends MVCPortlet {"
+REPL_LINE="public class TemplateSpecialJobPortlet extends MVCPortlet {"
 NEW_LINE="public class $MYPORTLET_CLASS extends MVCPortlet {"
 replace_line $PORTLET_CLASS "$REPL_LINE" "$NEW_LINE"
-REPL_LINE="private final Log _log = LogFactoryUtil.getLog(TemplatePortlet.class);"
+REPL_LINE="private final Log _log = LogFactoryUtil.getLog(TemplateSpecialJobPortlet.class);"
 NEW_LINE="private final Log _log = LogFactoryUtil.getLog($MYPORTLET_CLASS.class);"
 replace_line $PORTLET_CLASS "$REPL_LINE" "$NEW_LINE" "orig"
 mv "$PORTLET_CLASS" "$PACKAGE_PATH/$PORTLET_NAME.java"
 
 # ConfigurationActionImpl.java
-REPL_LINE="Utils.string2File(TemplatePortlet.pilotScript, pilotScript);"
+REPL_LINE="Utils.string2File(TemplateSpecialJobPortlet.pilotScript, pilotScript);"
 NEW_LINE="Utils.string2File($MYPORTLET_CLASS.pilotScript, pilotScript);"
 replace_line $CONFIG_CLASS "$REPL_LINE" "$NEW_LINE"
 
 # view-pilot.jsp
-REPL_LINE="<%@page import=\"it.dfa.unict.TemplatePortlet\"%>"
+REPL_LINE="<%@page import=\"it.dfa.unict.TemplateSpecialJobPortlet\"%>"
 NEW_LINE="<%@page import=\"it.dfa.unict.$MYPORTLET_CLASS\"%>"
 replace_line $VIEW_PILOT_JSP "$REPL_LINE" "$NEW_LINE" "orig"
-REPL_LINE="String pilotFilePath = TemplatePortlet.pilotScript;"
+REPL_LINE="String pilotFilePath = TemplateSpecialJobPortlet.pilotScript;"
 NEW_LINE="String pilotFilePath = $MYPORTLET_CLASS.pilotScript;"
 replace_line $VIEW_PILOT_JSP "$REPL_LINE" "$NEW_LINE" "orig"
 
 # build.xml
-REPL_LINE="<project name=\"template-special-portlet\" basedir=\".\" default=\"deploy\">"
+REPL_LINE="<project name=\"template-special-job-portlet\" basedir=\".\" default=\"deploy\">"
 NEW_LINE="<project name=\"$PROJECT_NAME\" basedir=\".\" default=\"deploy\">"
 replace_line $BUILD_FILE "$REPL_LINE" "$NEW_LINE" "orig"

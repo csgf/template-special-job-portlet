@@ -3,7 +3,6 @@ package it.dfa.unict;
 import it.dfa.unict.util.Constants;
 import it.dfa.unict.util.Utils;
 import it.infn.ct.GridEngine.Job.InfrastructureInfo;
-import it.infn.ct.GridEngine.Job.MultiInfrastructureJobSubmission;
 import it.infn.ct.GridEngine.JobCollection.JobCollection;
 import it.infn.ct.GridEngine.JobCollection.JobCollectionSubmission;
 import it.infn.ct.GridEngine.JobCollection.JobParametric;
@@ -45,8 +44,7 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
 
 public class TemplateSpecialJobPortlet extends MVCPortlet {
 
-	private final Log _log = LogFactoryUtil
-			.getLog(TemplateSpecialJobPortlet.class);
+	private final Log _log = LogFactoryUtil.getLog(TemplateSpecialJobPortlet.class);
 
 	private enum CollectionType {
 		JOB_COLLECTION, WORKFLOW_N1, JOB_PARAMETRIC
