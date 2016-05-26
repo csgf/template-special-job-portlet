@@ -2,15 +2,15 @@
 TEMPLATE SPECIAL JOB PORTLET
 *********************************
 
-============
-About
-============
-
 .. sidebar:: Version Available 1.0
     :subtitle: Template Special Job Portlet
 
     - Liferay 6.1.1 (`link <https://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/>`_)
     - Catania Grid & Cloud Engine 1.5.11 or above (`link <http://grid.ct.infn.it/csgf/binaries/GridEngine/>`_)
+
+============
+About
+============
 
 .. image:: images/AppLogo.png
    :height: 100px
@@ -186,7 +186,7 @@ Contributor(s)
 ==============
 
 If you have any questions or comments, please feel free to contact us using the
-Sci-GaIA project dicussion forum (`discourse.sci-gaia.eu <discourse.sci-gaia.eu>`_)
+Sci-GaIA project dicussion forum (`discourse.sci-gaia.eu <http://discourse.sci-gaia.eu>`_)
 
 .. _CSIR: http://www.csir.co.za/
 .. _DFA: http://www.dfa.unict.it/
