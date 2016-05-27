@@ -13,8 +13,8 @@ About
 ============
 
 .. image:: images/AppLogo.png
-   :height: 100px
    :align: left
+   :width: 30%
    :target: https://github.com/sci-gaia/template-special-job-portlet
    :alt: template-special-job-portlet logo
 
@@ -29,7 +29,7 @@ Science Gateway developers can customize to fit their own specific requirements.
 To make easier the customization process, a *customize.sh* bash script is included
 inside the source code package.
 
-The **template-special-job-portlet** three different kinds of special jobs, a user
+The **template-special-job-portlet** handles three different kinds of special jobs, a user
 can choose among:
 
 1. **Job Collection**: is a simple parallel application that spawns N sub-jobs; when all these are successfully  completed the whole collection becomes DONE.
@@ -68,7 +68,7 @@ add this new portlet. Following picture shows the correctly result:
 
 .. image:: images/template-view.png
     :align: center
-    :scale: 60%
+    :width: 90%
     :alt: template-special-job-portlet view
 
 As soon as the portlet has been successfully deployed you have to configure it using
@@ -93,7 +93,7 @@ The generic part contains:
 
 .. image:: images/portlet-config.png
    :align: center
-   :scale: 70%
+   :width: 90%
    :alt: template-special-job-portlet preference
 
 .. note:: You can get the *Application Idetifier* inserting a new entry into the **GridOperations** table:
@@ -156,7 +156,7 @@ Following fields will be traslated in the relevant infrastructure parameters bas
 
 .. image:: images/add-infrastructure.png
    :align: center
-   :scale: 70%
+   :width: 90%
    :alt: template-special-job-portlet preference
 
 
@@ -178,7 +178,7 @@ a default one will be created with the username and a timestamp.
 
 .. image:: images/view.png
    :align: center
-   :scale: 70%
+   :width: 90%
    :alt: template-special-job-portlet view
 
 ==============
